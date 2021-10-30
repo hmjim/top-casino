@@ -27,5 +27,5 @@ Disallow: /main.php
 Allow: /wp-content/uploads/
 Allow: *.css
 Allow: *.js
-Host: topz-casinoz.azurewebsites.net
+Host: topz-casinozz.azurewebsites.net
 
