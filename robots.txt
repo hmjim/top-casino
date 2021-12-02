@@ -27,5 +27,5 @@ Disallow: /main.php
 Allow: /wp-content/uploads/
 Allow: *.css
 Allow: *.js
-Host: topzz-cassinozz.azurewebsites.net
+Host: topzz-cassinoz.azurewebsites.net
 
