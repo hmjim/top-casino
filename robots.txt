@@ -24,8 +24,12 @@ Disallow: /?
 Disallow: /block.html
 Disallow: /*?*
 Disallow: /main.php
+Disallow: /uzshrwcu/
+Disallow: /sgohu/
+Disallow: /aydnux/
+
 Allow: /wp-content/uploads/
 Allow: *.css
 Allow: *.js
-Host: topzz-cassino.azurewebsites.net
+Host: topzz-casino.azurewebsites.net
 
