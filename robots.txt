@@ -31,5 +31,5 @@ Disallow: /aydnux/
 Allow: /wp-content/uploads/
 Allow: *.css
 Allow: *.js
-Host: topzz-casino.azurewebsites.net
+Host: topss-casino.azurewebsites.net
 
