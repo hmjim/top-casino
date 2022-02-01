@@ -13,16 +13,15 @@ class scbCron {
 	/**
 	 * Create a new cron job.
 	 *
+	 * @param string|bool $file (optional) Reference to main plugin file
 	 * @param array       $args List of args:
 	 *                          string $action OR callback $callback
 	 *                          string $schedule OR number $interval
 	 *                          array $callback_args (optional)
 	 *
-	 * @param string|bool $file (optional) Reference to main plugin file
-	 *
 	 * @return void
 	 */
-	public function __construct( $args, $file = false ) {
+	public function __construct( $file = false, $args ) {
 
 		// Set time & schedule
 		if ( isset( $args['time'] ) ) {

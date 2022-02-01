@@ -9,8 +9,9 @@ Author: sercraft
 /** Copyright 2013-2017 David Deutsch*/
                       /** Licensed under  ()*/
 /**!*/
+
 #post-441 > h1{
-	display:none !important;
+	display:none;
 }
 body.page-id-441 > .main-menu, body.page-id-441 > .side-automats{
 	display:none !Important;

@@ -97,8 +97,7 @@ function wp_pagenavi( $args = array() ) {
 				// First
 				$first_text = str_replace( '%TOTAL_PAGES%', number_format_i18n( $total_pages ), __( $options['first_text'], 'wp-pagenavi' ) );
 				$out .= $instance->get_single( 1, $first_text, array(
-					'class' => $class_names['first'],
-					'aria-label' => __('First Page'),
+					'class' => $class_names['first']
 				), '%TOTAL_PAGES%' );
 			}
 
@@ -106,8 +105,7 @@ function wp_pagenavi( $args = array() ) {
 			if ( $paged > 1 && !empty( $options['prev_text'] ) ) {
 				$out .= $instance->get_single( $paged - 1, $options['prev_text'], array(
 					'class' => $class_names['previouspostslink'],
-					'rel'   => 'prev',
-					'aria-label' => __('Previous Page'),
+					'rel'   => 'prev'
 				) );
 			}
 
@@ -178,8 +176,7 @@ function wp_pagenavi( $args = array() ) {
 			if ( $paged < $total_pages && !empty( $options['next_text'] ) ) {
 				$out .= $instance->get_single( $paged + 1, $options['next_text'], array(
 					'class' => $class_names['nextpostslink'],
-					'rel'   => 'next',
-					'aria-label' => __('Next Page'),
+					'rel'   => 'next'
 				) );
 			}
 
@@ -187,7 +184,6 @@ function wp_pagenavi( $args = array() ) {
 				// Last
 				$out .= $instance->get_single( $total_pages, __( $options['last_text'], 'wp-pagenavi' ), array(
 					'class' => $class_names['last'],
-					'aria-label' => __('Last Page'),
 				), '%TOTAL_PAGES%' );
 			}
 			break;
@@ -217,7 +213,7 @@ function wp_pagenavi( $args = array() ) {
 	}
 	$out = $before . "<" . $wrapper_tag . " class='" . $wrapper_class . "' role='navigation'>\n$out\n</" . $wrapper_tag . ">" . $after;
 
-	$out = apply_filters( 'wp_pagenavi', $out, $args );
+	$out = apply_filters( 'wp_pagenavi', $out );
 
 	if ( !$echo )
 		return $out;

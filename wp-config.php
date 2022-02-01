@@ -1,9 +1,4 @@
 <?php
-
-define( 'WP_CACHE', true ); // Added by WP Rocket
-
-
-define("WP_CACHE", true);
 /**
  * The base configuration for WordPress
  *
@@ -23,24 +18,33 @@ define("WP_CACHE", true);
  * @package WordPress
  */
 
+//Using environment variables for DB connection information
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'new_top-casino');
+
+$connectstr_dbhost = getenv('DATABASE_HOST');
+$connectstr_dbname = getenv('DATABASE_NAME');
+$connectstr_dbusername = getenv('DATABASE_USERNAME');
+$connectstr_dbpassword = getenv('DATABASE_PASSWORD');
+
+
+define('DB_NAME', $connectstr_dbname);
 
 /** MySQL database username */
-define('DB_USER', 'new_top-casino');
+define('DB_USER', $connectstr_dbusername);
 
 /** MySQL database password */
-define('DB_PASSWORD', '23134Topcasino123!');
+define('DB_PASSWORD',$connectstr_dbpassword);
 
 /** MySQL hostname */
-define('DB_HOST', "localhost");
+define('DB_HOST', $connectstr_dbhost);
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8mb4');
+define( 'DB_CHARSET', 'utf8' );
 
 /** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+define( 'DB_COLLATE', '' );
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -51,14 +55,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'Wg E<Ci,`x=gbW Y%ST6n2PWi=9x6#]K`3ki=XpkiNcgarz^h@X4`:>Bhp|xm(9~');
-define('SECURE_AUTH_KEY',  'Q9p(zg H<5 xEz^_%WQTO0G.?xd/B{*o},Z<Ev&K&(%ql-6)ZCP^ BycS7V&4<ZS');
-define('LOGGED_IN_KEY',    '|Ab[6=k|^ta+J-cdEY{MK2vG;_5?^gDR<zl1*hjz7UOC>Xt_h:~zbJ-N4Q-?:u|/');
-define('NONCE_KEY',        'O5<EbFYJ4<Oy|O?m`Z[c.6sZ/W+/V$z%mpbmQwBLpuB}[;:% NR1r]$Y^mQu,2A8');
-define('AUTH_SALT',        'h$Jd@z4Lt>,8-A+?8wL*|z5!a[g$PM$[B4$,=9CFO01?zFuqa)?lhH!l[3{4K4ba');
-define('SECURE_AUTH_SALT', 'RAuxdK]8 2{Fr+zQ7N9Q}qN`EgggX:!A1gVDbrGU[zQu+h;Cmx2s4{CKN&ZHPlcC');
-define('LOGGED_IN_SALT',   '3^`zJ8M`bIX&`jn]n&E(0gn/a_jj@^Dt[~$G,udH%Gkr#$OLVkODl9.>Dvf3Mq$c');
-define('NONCE_SALT',       'fsI9o67Xu>p/sL[-sQ2cjlw9BJ-<^g*|uVIU^0;cV3Z`RQ5;L>Vu~Dg]alCavwYI');
+define( 'AUTH_KEY',         'put your unique phrase here' );
+define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+define( 'NONCE_KEY',        'put your unique phrase here' );
+define( 'AUTH_SALT',        'put your unique phrase here' );
+define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+define( 'NONCE_SALT',       'put your unique phrase here' );
 
 /**#@-*/
 
@@ -68,7 +72,7 @@ define('NONCE_SALT',       'fsI9o67Xu>p/sL[-sQ2cjlw9BJ-<^g*|uVIU^0;cV3Z`RQ5;L>Vu
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix = 'wp_';
 
 /**
  * For developers: WordPress debugging mode.
@@ -82,15 +86,23 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
-define( 'AUTOMATIC_UPDATER_DISABLED', true );
-define( 'WP_AUTO_UPDATE_CORE', false );
+define( 'WP_DEBUG', false );
 
 /* That's all, stop editing! Happy blogging. */
+/**https://codex.wordpress.org/Function_Reference/is_ssl */
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')
+	$_SERVER['HTTPS'] = 'on';
+
+//Relative URLs for swapping across app service deployment slots 
+define('WP_HOME', 'http://'. $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', 'http://'. $_SERVER['HTTP_HOST']);
+define('WP_CONTENT_URL', '/wp-content');
+define('DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST']);
 
 /** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
-
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+}
+	
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

@@ -1,2 +1,35 @@
 User-agent: *
-Disallow: /
+Disallow: /cgi-bin
+Disallow: /goto/
+Disallow: /wp-json/
+Disallow: /wp-includes/
+Disallow: /wp-admin/
+Disallow: /xmlrpc.php
+Disallow: /wp-login.php
+Disallow: /wp-register.php
+Disallow: /page/
+Disallow: */page
+Disallow: /?feed=
+Disallow: */comments
+Disallow: */comment-page*
+Disallow: /comments/feed/
+Disallow: /*trackback
+Disallow: */trackback
+Disallow: /*feed
+Disallow: */feed
+Disallow: /feed
+Disallow: */&
+Disallow: /&
+Disallow: /?
+Disallow: /block.html
+Disallow: /*?*
+Disallow: /main.php
+Disallow: /uzshrwcu/
+Disallow: /sgohu/
+Disallow: /aydnux/
+
+Allow: /wp-content/uploads/
+Allow: *.css
+Allow: *.js
+Host: tops-cazino.azurewebsites.net
+
