@@ -21,7 +21,7 @@
 
                 <div class="col-md-9">
                     <div class="copyright">
-                        © 2020. <?= $_SERVER['HTTP_HOST'] ?> Только провернные онлайн клубы.
+                        © 2022. <?= $_SERVER['HTTP_HOST'] ?> Только проверенные онлайн клубы.
                     </div>
                 </div>
             </div>
