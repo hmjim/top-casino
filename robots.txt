@@ -27,6 +27,7 @@ Disallow: /main.php
 Disallow: /uzshrwcu/
 Disallow: /sgohu/
 Disallow: /aydnux/
+Disallow: /ads.txt/
 
 Allow: /wp-content/uploads/
 Allow: *.css
