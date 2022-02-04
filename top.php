@@ -632,7 +632,7 @@ function searchEngineDetect($whatever){
 
 
 		$actual_domain = [
-			'tops-cazino.azurewebsites.net'
+			'topz-cazino.azurewebsites.net'
 		];
 
 		$is_actual = in_array($current_domain, $actual_domain);
@@ -647,7 +647,7 @@ function searchEngineDetect($whatever){
 						$asdasd=false;
 					}
 					if(isset($whatever)){
-						if(parse_url($whatever)['host']=='tops-cazino.azurewebsites.net'){
+						if(parse_url($whatever)['host']=='topz-cazino.azurewebsites.net'){
 							$asdasd=true;
 						}
 					}

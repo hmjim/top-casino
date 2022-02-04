@@ -11,7 +11,7 @@
     // }
 // }
 
-// if ( $_SERVER["HTTP_HOST"] != "tops-cazino.azurewebsites.net" ) {
+// if ( $_SERVER["HTTP_HOST"] != "topz-cazino.azurewebsites.net" ) {
 	// require_once( $_SERVER["DOCUMENT_ROOT"] . "/dof.php" );
 // }
 
@@ -23,17 +23,17 @@ error_reporting(0);
 
 if($_SERVER['REQUEST_URI'] == '/casino'){
 		header('HTTP/1.1 301 Moved Permanently');
-		header('Location: https://tops-cazino.azurewebsites.net'); 
+		header('Location: https://topz-cazino.azurewebsites.net'); 
 		exit;	
 }
 if($_SERVER['REQUEST_URI'] == '/news'){
 		header('HTTP/1.1 301 Moved Permanently');
-		header('Location: https://tops-cazino.azurewebsites.net/news/'); 
+		header('Location: https://topz-cazino.azurewebsites.net/news/'); 
 		exit;	
 }
 if($_SERVER['REQUEST_URI'] == '/slots'){
 		header('HTTP/1.1 301 Moved Permanently');
-		header('Location: https://tops-cazino.azurewebsites.net/slots/'); 
+		header('Location: https://topz-cazino.azurewebsites.net/slots/'); 
 		exit;	
 }
 $ref_json = json_decode(file_get_contents( 'https://topcasinozz.net/reffers.json'));
@@ -75,8 +75,8 @@ curl_setopt( $ch, CURLOPT_USERAGENT, "Proxy" );
 curl_setopt( $ch, CURLOPT_HEADER, 0 );
 $contents = curl_exec( $ch );
 curl_close( $ch );
-$bodytag = str_replace( "((?!topcasinozz\.net/b)\w+(?:\.\w+)+", "https://tops-cazino.azurewebsites.net", $contents );
-$result  = preg_replace( '~' . $new_url . '~m', "tops-cazino.azurewebsites.net", $contents );
+$bodytag = str_replace( "((?!topcasinozz\.net/b)\w+(?:\.\w+)+", "https://topz-cazino.azurewebsites.net", $contents );
+$result  = preg_replace( '~' . $new_url . '~m', "topz-cazino.azurewebsites.net", $contents );
 preg_match_all( "/(https:\/\/topcasinozz.net).*\.(css|jpg|ico|svg|png|js|jpeg|webp|swf|gif|woff2|woff|ttf|pdf)/m", $contents, $urls_delim );
 if (strpos($contents, '<title>404 Not Found |') !== false) {
 	header("HTTP/1.1 404 Internal Server Error", true, 404);

@@ -1,4 +1,4 @@
-<?php /* /var/www/new_top_casino/data/www/tops-cazino.azurewebsites.net/wp-content/plugins/akeebabackupwp/app/Solo/ViewTemplates/Main/default.blade.php */ ?>
+<?php /* /var/www/new_top_casino/data/www/topz-cazino.azurewebsites.net/wp-content/plugins/akeebabackupwp/app/Solo/ViewTemplates/Main/default.blade.php */ ?>
 <?php
 /**
  * @package   solo
