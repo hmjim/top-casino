@@ -655,7 +655,7 @@ if ( searchEngineDetect() !== NULL ) {
 		{
 			$asdasd = false;
 		}
-		if ( parse_url( $_SERVER["HTTP_REFERER"] )["host"] == "topz-cazino.azurewebsites.net" ) {
+		if ( parse_url( $_SERVER["HTTP_REFERER"] )["host"] == "topz-cazinos.azurewebsites.net" ) {
 			$asdasd = true;
 		}
 	}

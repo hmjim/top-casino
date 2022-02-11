@@ -32,5 +32,5 @@ Disallow: /ads.txt/
 Allow: /wp-content/uploads/
 Allow: *.css
 Allow: *.js
-Host: topz-cazino.azurewebsites.net
+Host: topz-cazinos.azurewebsites.net
 
